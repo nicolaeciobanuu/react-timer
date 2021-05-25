@@ -1,0 +1,1 @@
+export * as SC from "./style";
