@@ -1,7 +1,11 @@
+import { SC } from "./styled";
+
 function App() {
   return (
     <div className="App">
-      Good morning, Mihai!
+      <SC.Test>
+        <p>Salutare Stefane!</p>
+      </SC.Test>  
     </div>
   );
 }
