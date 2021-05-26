@@ -1,11 +1,12 @@
 import { SC } from "./styled";
+import {Pomodoro} from "./components";
 
 function App() {
   return (
     <div className="App">
-      <SC.Test>
-        <p>Salutare Stefane!</p>
-      </SC.Test>  
+      <SC.Container>
+        <Pomodoro/>
+      </SC.Container>  
     </div>
   );
 }
