@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
-const Test = styled.div`
-    background-color: red;
+const Container = styled.div`
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1200px;
+    margin: 0 auto;
 `
-export { Test };
+export { Container };
