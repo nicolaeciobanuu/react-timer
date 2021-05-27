@@ -9,7 +9,7 @@ const shortcutsList: { name: string, key: string }[] = [
     {"name": "Short Break", "key": "2"},
     {"name": "Long Break", "key": "3"}
 ]
-export const Shortcuts = () =>
+export const Shortcuts = React.memo(() =>
     <SC.Shortcuts>
         <SC.Icon>
             <FaKeyboard />
@@ -25,4 +25,4 @@ export const Shortcuts = () =>
             )}
         </SC.ShortcutsBox>
     </SC.Shortcuts>
-        
+)     

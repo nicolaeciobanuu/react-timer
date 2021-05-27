@@ -13,7 +13,7 @@ interface TypeSelectProps  {
     }
 }
 
-export const TypeSelect = ({types, changeType, selected,}: TypeSelectProps) =>
+export const TypeSelect = React.memo(({types, changeType, selected,}: TypeSelectProps) =>
     <SC.TypeSelect>
         {types.map((type) => 
             <SC.Button
@@ -25,3 +25,4 @@ export const TypeSelect = ({types, changeType, selected,}: TypeSelectProps) =>
             </SC.Button>
         )}
     </SC.TypeSelect>
+)

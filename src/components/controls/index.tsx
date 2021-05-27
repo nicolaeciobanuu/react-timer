@@ -8,7 +8,7 @@ interface ControlProps  {
     status: any;
 }
 
-export const Controls = ({ start, reset, pause, status }: ControlProps) => {
+export const Controls = React.memo(({ start, reset, pause, status }: ControlProps) => {
     //Added this array of strings to fix >
     //"This condition will always return 'false' since the types have no overlap" on line 34
     const statusText= ["Running", "Paused", "Resume", "Finished"];
@@ -39,4 +39,4 @@ export const Controls = ({ start, reset, pause, status }: ControlProps) => {
             )}
         </SC.Controls>
     )
-}
+})
