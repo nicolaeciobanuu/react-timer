@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/react-timer/static/css/main.8b7da8c7.chunk.css",
-    "main.js": "/react-timer/static/js/main.62ba86b5.chunk.js",
-    "main.js.map": "/react-timer/static/js/main.62ba86b5.chunk.js.map",
+    "main.js": "/react-timer/static/js/main.5692d89d.chunk.js",
+    "main.js.map": "/react-timer/static/js/main.5692d89d.chunk.js.map",
     "runtime-main.js": "/react-timer/static/js/runtime-main.f086747c.js",
     "runtime-main.js.map": "/react-timer/static/js/runtime-main.f086747c.js.map",
     "static/js/2.834ab5d0.chunk.js": "/react-timer/static/js/2.834ab5d0.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.f086747c.js",
     "static/js/2.834ab5d0.chunk.js",
     "static/css/main.8b7da8c7.chunk.css",
-    "static/js/main.62ba86b5.chunk.js"
+    "static/js/main.5692d89d.chunk.js"
   ]
 }
