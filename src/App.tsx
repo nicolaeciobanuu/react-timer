@@ -4,7 +4,5 @@ import {Pomodoro} from "./components";
 
 export const App = () => 
     <div className="App">
-      <SC.Content>
-        <Pomodoro/>
-      </SC.Content>  
+        <Pomodoro/> 
     </div>
