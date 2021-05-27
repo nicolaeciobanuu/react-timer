@@ -58,7 +58,7 @@ export const Pomodoro = () => {
                 console.log("Notification error", e);
             }
         }
-        setTime(time - 1);
+        setTime(time=>time - 1);
     }
     const stopInterval = (): void => {
         clearInterval(int);
