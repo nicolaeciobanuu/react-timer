@@ -14,7 +14,7 @@ export const Shortcuts = () =>
         <SC.Icon>
             <FaKeyboard />
         </SC.Icon>
-        <SC.ShortcutsBox>
+        <SC.ShortcutsBox className="box">
             {shortcutsList.map((shortcut, index) =>
                 <SC.Shortcut key={index}>
                     <div>{shortcut.name}</div>
