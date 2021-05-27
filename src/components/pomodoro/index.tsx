@@ -1,9 +1,11 @@
 import React, {useState, useEffect} from "react";
+import { start } from "repl";
 import { Controls } from "../";
 import { Shortcuts } from "../";
 import { TypeSelect } from "../";
 import { TimeDisplay } from "../";
 import { SC } from "../";
+
 const props =   {
     types: [
         { name: "Pomodoro", time: 1500 },
@@ -12,16 +14,12 @@ const props =   {
     ]
 }
 
-
 export const Pomodoro = () => {
 
-    /////////////////////////////////////////////////////////////////
     const [selectedType, setSelectedType] = useState(props.types[0]);
     const [time, setTime] = useState(props.types[0].time);
     const [running, setRunning] = useState(false);
-    const [int, setInt]: any = useState(null);
-    ////////////////////////////////////////////////////////////////
-
+    const [int, setInt]: any = useState(null);//interval
     useEffect(() => {
         document.addEventListener("keyup", handleKeyUp);
         Notification.requestPermission();
@@ -30,16 +28,12 @@ export const Pomodoro = () => {
         }
     },[])
     const handleKeyUp = (event): void => {
-        if (event.target.tagName === "INPUT") return;
-        if (event.key === "") {
-            pauseTimer();
-        } else if (event.key === "Escape") {
-            resetTimer();
-        } else if (event.key >= 1 && event.key <= props.types.length) { // 1-3
+        //Handling number shortcuts
+        if (event.key >= 1 && event.key <= props.types.length) {
             changeType(props.types[event.key - 1]);
         }
     };
-    const changeType = (type ): void => {
+    const changeType = ( type ): void => {
         resetTimer();
         setSelectedType(type);
         setTime(type.time);
@@ -67,8 +61,7 @@ export const Pomodoro = () => {
     const startTimer = (): void => {
         setRunning(true);
         setInt(setInterval(tick ,1000));
-        if (time < 0)
-            setTime(selectedType.time);
+        setTime(time > 0 ? time : selectedType.time);
     }
     const resetTimer = (): void => {
         stopInterval();
