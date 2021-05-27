@@ -33,7 +33,7 @@ export const Controls = ({ start, reset, pause, status }: ControlProps) => {
                         onClick={() => pause()}
                         className={status=== statusText[1]? "resume" : "pause"}
                     >
-                        {status === statusText[1] ? statusText[2] : statusText[1]}
+                        {status === statusText[1] ? statusText[2] : "Pause"}
                     </SC.ControlsButton>
                 </div>
             )}
