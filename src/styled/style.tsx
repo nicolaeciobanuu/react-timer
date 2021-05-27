@@ -1,13 +1,5 @@
 import styled from "styled-components";
 
-export const Content = styled.div`
-    border: 1px solid black;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    max-width: 1200px;
-    margin: 0 auto;
-    
-`
 export const Controls = styled.div`
     width: 250px;
     display: flex;
@@ -190,31 +182,6 @@ export const Status = styled.p`
     letter-spacing: 3px;
     margin: 10px 0 0;
 `
-export const ToggleSound = styled.div`
-    position: absolute;
-    width: 27px;
-    height: 24px;
-    right: 25px;
-    top: 25px;
-    border: 0;
-    background: transparent;
-    font-size: 24px;
-    color: #666;
-    opacity: .5;
-    transition: all .3s;
-    outline: 0;
-    cursor: pointer;
-    padding: 0;
-    text-align: left;
-    .active{
-        opacity: 1;
-    }
-`
-export const ButtonSound = styled.button`
-
-`
-export const VolumeIcon = styled.div`
-`
 export const TypeSelect = styled.div`
     width: 400px;
     display: flex;
@@ -225,6 +192,9 @@ export const TypeSelect = styled.div`
         background: #fff;
         color: #D9534F;
         box-shadow: 0 3px 10px rgba(0, 0, 0, .12);
+    }
+    button:last-child{
+        border-right: 2px solid #ccc;
     }
 `
 export const PomodoroContent = styled.div`
