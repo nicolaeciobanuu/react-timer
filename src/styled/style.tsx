@@ -6,6 +6,17 @@ export const Content = styled.div`
     grid-template-columns: 1fr 1fr;
     max-width: 1200px;
     margin: 0 auto;
+    
+`
+export const Controls = styled.div`
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    div{
+        width: 250px;
+        display: flex;
+        justify-content: center;
+    }
     .start{
         background: #D9534F;
         color: #fff;
@@ -37,11 +48,6 @@ export const Content = styled.div`
         }
     }
 `
-export const Controls = styled.div`
-    width: 250px;
-    display: flex;
-    justify-content: center;
-`
 export const ControlsButton = styled.button`
     height: 40px;
     border-radius: 40px;
@@ -57,6 +63,7 @@ export const ControlsButton = styled.button`
     outline: 0;
     transition: all .3s;
     padding: 0;
+    
 `
 export const Button = styled.button`
     flex: 1;
@@ -70,6 +77,7 @@ export const Button = styled.button`
     outline: 0;
     transition: all .3s;
     cursor: pointer;
+    
 `
 export const Shortcuts = styled.div`
     position: absolute;
@@ -80,7 +88,12 @@ export const Shortcuts = styled.div`
     @media screen and (max-width: 768px){
         display: none;
     }
-    
+    &:hover{
+        .box{
+            opacity: 1;
+            visibility: visible;
+        }
+    }
 `
 export const ShortcutsBox = styled.div`
     position: absolute;
@@ -95,10 +108,7 @@ export const ShortcutsBox = styled.div`
     opacity: 0;
     visibility: hidden;
     transition: opacity .3s;
-    &:hover{
-        opacity: 1;
-        visibility: visible;
-    }
+    
 `
 export const Shortcut = styled.div`
     display: flex;
@@ -132,16 +142,19 @@ export const Shortcut = styled.div`
         padding: .25em .7em;
         white-space: nowrap;
     }
+    &:hover{
+        opacity: 1;
+        visibility: visible;
+    }
+
 `
 export const Icon = styled.div`
     font-size: 24px;
-    color: red;
     color: #666;
     opacity: .5;
     transition: all .3s;
     &:hover{
         opacity: 1;
-        cursor: pointer;
     }
 `
 export const TimeDisplay = styled.div`
@@ -208,4 +221,27 @@ export const TypeSelect = styled.div`
     @media screen and (max-width: 500px) {
         width: 100%;
     }
+    .active{
+        background: #fff;
+        color: #D9534F;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, .12);
+    }
+`
+export const PomodoroContent = styled.div`
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    @media (max-width: 1000px) {
+        flex-direction: column;
+    }
+`
+export const Pomodoro = styled.div`
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    min-height: 600px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 0;
 `
