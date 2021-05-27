@@ -2,7 +2,7 @@ import * as React from "react";
 import {SC}from "../";
 import { formatTime } from "../../utils";
 
-type TimeDisplayProps = {
+interface TimeDisplayProps  {
     time: number;
     status: string;
     progress: number;

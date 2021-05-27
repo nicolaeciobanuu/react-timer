@@ -1,19 +1,21 @@
 import * as React from "react";
 import { SC } from "../";
 
-type TypeSelectProps = {
+interface TypeSelectProps  {
     types: {
         name: string;
+        time: number;
     }[];
     changeType: Function;
     selected: {
         name: string;
-    };
+        time: number;
+    }
 }
 
-export const TypeSelect = ({types, changeType, selected}: TypeSelectProps) =>
+export const TypeSelect = ({types, changeType, selected,}: TypeSelectProps) =>
     <SC.TypeSelect>
-        {types.map((type, index) => {
+        {types.map((type) => 
             <SC.Button
                 key={type.name}
                 onClick={() => changeType(type)}
@@ -21,7 +23,5 @@ export const TypeSelect = ({types, changeType, selected}: TypeSelectProps) =>
             >
                 {type.name}
             </SC.Button>
-        })
-
-        }
+        )}
     </SC.TypeSelect>
