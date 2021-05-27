@@ -1,11 +1,11 @@
 import * as React from "react";
 import { SC } from "../";
 
-type ControlProps = {
+interface ControlProps  {
     start: Function;
     reset: Function;
     pause: Function;
-    status: string;
+    status: any;
 }
 
 export const Controls = ({ start, reset, pause, status }: ControlProps) => {
@@ -15,22 +15,22 @@ export const Controls = ({ start, reset, pause, status }: ControlProps) => {
     return(
         <SC.Controls>
             {!status && (
-                <SC.ControlsButton onClick={()=>start} className="start">
+                <SC.ControlsButton onClick={()=>start()} className="start">
                     Start Timer
                 </SC.ControlsButton>
             )}
             {status === statusText[3] && (
-                <SC.ControlsButton onClick={()=>start} className="start">
+                <SC.ControlsButton onClick={()=>start()} className="start">
                     Restart Timer
                 </SC.ControlsButton>
             )}
             {(status === statusText[1] || status === statusText[0]) && (
                 <div>
-                    <SC.ControlsButton onClick={()=>reset} className="reset">
+                    <SC.ControlsButton onClick={()=>reset()} className="reset">
                         Reset
                     </SC.ControlsButton>
                     <SC.ControlsButton
-                        onClick={() => pause}
+                        onClick={() => pause()}
                         className={status=== statusText[1]? "resume" : "pause"}
                     >
                         {status === statusText[1] ? statusText[2] : statusText[1]}
